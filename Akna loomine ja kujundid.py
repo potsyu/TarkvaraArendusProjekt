@@ -1,32 +1,45 @@
-# Ülesanne 1: Akna loomine ja kujundid
-# Valisin Foor -i.
+#Foor ;)
+#Made a few updates based on Ülesanne 1_lisaülesanded :)
+#Modified by Karl Karulin
 
 import pygame
-pygame.init()
 
 #Ekraani seaded
 screen = pygame.display.set_mode([300,300])
-pygame.display.set_caption("Foor - Björn Johansonm")
+pygame.display.set_caption("Foor - #INSERT NAME HERE#")
 screen.fill ([0, 0, 0])
 
-#Joonistamine (foori piir)
-pygame.draw.rect(screen, [255, 255, 255], [100, 20, 100, 260], 2)
+#Valgusfoori tulekesed :)))
 
-#Joonistamine (Punane ring)
-pygame.draw.circle(screen, [255, 0, 0], [150, 70], 37 , 0)
+#Punane
+pygame.draw.circle(screen, [255, 0, 0], [150, 32], 17, 0)
+#Kollane
+pygame.draw.circle(screen, [255, 255, 0], [150, 69], 17, 0)
+#Roheline
+pygame.draw.circle(screen, [0, 255, 0], [150, 107], 17, 0)
 
-#Joonistamine (Kollane ring)
-pygame.draw.circle(screen, [255, 255, 0], [150, 150], 37 , 0)
+#Foori piir (ristküliku alumine on kõrgusest (0) -st 129 pikslit)
+pygame.draw.rect(screen, [32, 32, 32], [120, 10, 58, 120], 2)
 
+#Foori post
+pygame.draw.polygon(screen, [64, 64, 64], [[155,129],[146, 129],[145, 260],[155, 260]], 0)
 
-#Joonistamine (Roheline ring)
-pygame.draw.circle(screen, [0, 255, 0], [150, 230], 37 , 0)
+#Foori alus
+pygame.draw.polygon(screen, [255, 255, 255], [[156, 260], [145, 260], [111, 300], [190, 300]], 0)
 
+#Foori aluse vörvid (THIS TOOK SOOO MUCH TIMEEE)
+#Sinine
+pygame.draw.polygon(screen, [0, 0, 255], [[156, 260], [145, 260],[134, 273], [168, 274]], 0)
+#Must
+pygame.draw.polygon(screen, [0, 0, 0], [[134, 273], [168, 274],[181, 289],[121, 288]  ], 0)
+#Valge riba
+pygame.draw.polygon(screen, [64, 64, 64], [[156, 260], [145, 260], [111, 300], [190, 300]], 3)
 
 #Ekraani värskendamine
 pygame.display.flip()
 
-#Kood, et ekraan automaatselt ei läheks kinni.
+
+#Alumine osa ei lase Pygame ekraanil ise kinni minna.
 running = True
 while running:
   for event in pygame.event.get():

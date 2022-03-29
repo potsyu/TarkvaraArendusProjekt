@@ -26,6 +26,17 @@ pygame.draw.line(screen, [255,255,0], [230, 45], [210, 55], 1)
 pygame.draw.line(screen, [255,255,0], [240, 53], [236, 70], 1)
 pygame.draw.line(screen, [255,255,0], [254, 53], [260, 70], 1)
 
+#Kuusepuu
+#Alus
+pygame.draw.polygon(screen, [139, 63, 13], [[220, 250],[250, 250], [250, 200], [220, 200] ], 0)
+
+#Kuusk :)
+pygame.draw.polygon(screen, [0, 128, 0], [[190, 200], [280, 200],[255, 170], [215, 170]])
+
+pygame.draw.polygon(screen, [0, 128, 0], [[200, 170], [225, 140],[250, 140], [270, 170]])
+
+pygame.draw.polygon(screen, [0, 128, 0], [[210, 140], [265, 140],[237, 110]])
+
 #lumememme ringid
 pygame.draw.circle(screen, [255,255,255], [150,220], 50, 100) #See rida joonistab lumememme alumise ringi, mis on valget värvi.
 pygame.draw.circle(screen, [255,255,255], [150,135], 40, 100) #See rida joonistab lumememme teise ringi, mis on valget värvi.

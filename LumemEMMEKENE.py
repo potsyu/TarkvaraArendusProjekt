@@ -9,7 +9,7 @@ pygame.display.set_caption("Lumemees - Karl Karulin") #See rida paneb aknale pea
 screen.fill([0, 191, 255])
 
 #Joonistamine
-#Teeme lume kah
+#Lumi ;)
 pygame.draw.polygon(screen, [220, 220, 220], [[0, 250], [300, 250], [300, 300], [0, 300]], 0)
 
 #Ilus päike :)
@@ -32,10 +32,12 @@ pygame.draw.polygon(screen, [139, 63, 13], [[220, 250],[250, 250], [250, 200], [
 
 #Kuusk :)
 pygame.draw.polygon(screen, [0, 128, 0], [[190, 200], [280, 200],[255, 170], [215, 170]])
-
 pygame.draw.polygon(screen, [0, 128, 0], [[200, 170], [225, 140],[250, 140], [270, 170]])
-
 pygame.draw.polygon(screen, [0, 128, 0], [[210, 140], [265, 140],[237, 110]])
+
+#Pilved
+pygame.draw.ellipse(screen, [255, 255, 255], (15, 30, 80, 20))
+pygame.draw.ellipse(screen, [255, 255, 255], (190, 60, 80, 20))
 
 #lumememme ringid
 pygame.draw.circle(screen, [255,255,255], [150,220], 50, 100) #See rida joonistab lumememme alumise ringi, mis on valget värvi.
@@ -71,16 +73,16 @@ pygame.draw.line(screen, [139, 69, 19], [240, 90], [250, 60], 4)
 pygame.draw.line(screen, [139, 69, 19], [237, 90], [263, 85], 4)
 
 
-#No ss tuleb hari kah
+#Hari 
 pygame.draw.line(screen, [160, 82, 45], [50, 40], [50, 200], 5)
-#Harja otsad ffs
+#Harja otsad
 pygame.draw.line(screen, [139, 69, 19], [50, 40], [35, 15], 5)
 pygame.draw.line(screen, [139, 69, 19], [50, 40], [42, 10], 5)
 pygame.draw.line(screen, [139, 69, 19], [50, 40], [49, 5], 5)
 pygame.draw.line(screen, [139, 69, 19], [50, 40], [60, 5], 5)
 pygame.draw.line(screen, [139, 69, 19], [50, 40], [71, 10], 5)
 
-#Mütsike lmfao
+#Mütsike
 pygame.draw.polygon(screen, [32, 32, 32], [[110, 40], [190, 40], [190, 30], [170, 30], [170, 7], [130, 7], [130, 30], [110, 30]], 0)
 
 #Teeme ilusa punase riba kaabule ka :)))

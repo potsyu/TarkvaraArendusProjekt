@@ -5,10 +5,16 @@ import pygame #Sellel real imporditakse Pygame
 pygame.init() #See rida sisestab kõik pygame moodulid programmi.
 
 screen = pygame.display.set_mode([300,300]) #See rida teeb uue akna, kuhu ilmuvad programmis kirjutatud kujutised 300 * 300.
-pygame.display.set_caption("Lumemees - #INSERT NAME HERE#") #See rida paneb aknale pealkirja
-screen.fill([0, 0, 0])
+pygame.display.set_caption("Lumemees - Karl Karulin") #See rida paneb aknale pealkirja
+screen.fill([0, 191, 255])
 
 #Joonistamine
+#Teeme lume kah
+pygame.draw.polygon(screen, [220, 220, 220], [[0, 250], [300, 250], [300, 300], [0, 300]], 0)
+
+#Ilus päike :)
+pygame.draw.circle(screen, [255, 255, 0], [250, 30], 20, 100)
+
 #lumememme ringid
 pygame.draw.circle(screen, [255,255,255], [150,220], 50, 100) #See rida joonistab lumememme alumise ringi, mis on valget värvi.
 pygame.draw.circle(screen, [255,255,255], [150,135], 40, 100) #See rida joonistab lumememme teise ringi, mis on valget värvi.
@@ -43,11 +49,20 @@ pygame.draw.line(screen, [139, 69, 19], [240, 90], [250, 60], 4)
 pygame.draw.line(screen, [139, 69, 19], [237, 90], [263, 85], 4)
 
 
+#No ss tuleb hari kah
+pygame.draw.line(screen, [160, 82, 45], [50, 40], [50, 200], 5)
+#Harja otsad ffs
+pygame.draw.line(screen, [139, 69, 19], [50, 40], [35, 15], 5)
+pygame.draw.line(screen, [139, 69, 19], [50, 40], [42, 10], 5)
+pygame.draw.line(screen, [139, 69, 19], [50, 40], [49, 5], 5)
+pygame.draw.line(screen, [139, 69, 19], [50, 40], [60, 5], 5)
+pygame.draw.line(screen, [139, 69, 19], [50, 40], [71, 10], 5)
+
 #Mütsike lmfao
 pygame.draw.polygon(screen, [32, 32, 32], [[110, 40], [190, 40], [190, 30], [170, 30], [170, 7], [130, 7], [130, 30], [110, 30]], 0)
 
 #Teeme ilusa punase riba kaabule ka :)))
-pygame.draw.polygon(screen, [255, 0, 0], [[190, 30], [170, 30], [170, 25], [130, 25], [130, 30]], 0)
+pygame.draw.polygon(screen, [255, 255, 255], [[190, 30], [170, 30], [170, 25], [130, 25], [130, 30]], 0)
 
 #Ekraani värskendus :)
 pygame.display.flip() #See rida uuendab pygame ekraani.
@@ -61,6 +76,4 @@ while running:
       running = False
     if running == False:
       pygame.quit()
-
-
 

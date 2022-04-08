@@ -22,10 +22,10 @@ chat = pygame.transform.scale(chat, [240, 180])
 screen.blit(chat,[250,90])
 
 #lisame teksti
-font = pygame.font.SysFont("Comic Sans MS", 28)
+font = pygame.font.SysFont("Comic Sans MS", 20)
 text = font.render("Tere, olen Runescaper :)", True, [255,255,255])
 # text = pygame.transform.scale(text, [240,100])
-screen.blit(text, [200,150])
+screen.blit(text, [250,150])
 
 
 pygame.display.flip()

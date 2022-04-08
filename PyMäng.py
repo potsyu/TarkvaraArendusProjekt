@@ -7,8 +7,22 @@ screen.fill([204, 255, 204])
 
 #lisame teksti
 font = pygame.font.SysFont("Comic Sans MS", 50)
+font.set_bold(True)
+font.set_underline(True)
+font.set_italic(True)
 text = font.render("Hello PyGame", True, [0,0,0])
-screen.blit(text, [200,200])
+
+
+#tekstikasti suurus
+text_width = text.get_rect().width
+text_height = text.get_rect().height
+screen.blit(text, [150,150])
+
+#Ilus pilt :)
+#Lisame pildid
+bg = pygame.image.load("bg_shop.jpg")
+screen.blit(bg,[0,0])
+
 
 pygame.display.flip()
 

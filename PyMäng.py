@@ -13,18 +13,19 @@ screen.blit(bg,[0,0])
 
 #Lisame mehikene
 Mehikene = pygame.image.load("seller.png")
-Mehikene = pygame.transform.scale(Mehikene, [298, 352])
-screen.blit(Mehikene,[50,100])
+Mehikene = pygame.transform.scale(Mehikene, [252, 300])
+screen.blit(Mehikene,[105,165])
 
 #Lisame chatti
 chat = pygame.image.load("chat.png")
-chat = pygame.transform.scale(chat, [270, 210])
-screen.blit(chat,[220,40])
+chat = pygame.transform.scale(chat, [240, 180])
+screen.blit(chat,[250,90])
 
 #lisame teksti
-font = pygame.font.SysFont("Arial", 32)
-text = font.render("Tere, olen sinu ori", True, [255,255,255])
-screen.blit(text, [250,110])
+font = pygame.font.SysFont("Comic Sans MS", 28)
+text = font.render("Tere, olen Runescaper :)", True, [255,255,255])
+# text = pygame.transform.scale(text, [240,100])
+screen.blit(text, [200,150])
 
 
 pygame.display.flip()

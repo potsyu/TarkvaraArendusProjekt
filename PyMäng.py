@@ -18,7 +18,7 @@ screen.blit(Mehikene,[105,165])
 
 #Lisame chatti
 chat = pygame.image.load("chat.png")
-chat = pygame.transform.scale(chat, [262, 210])
+chat = pygame.transform.scale(chat, [258, 210])
 screen.blit(chat,[245,65])
 
 #lisame teksti

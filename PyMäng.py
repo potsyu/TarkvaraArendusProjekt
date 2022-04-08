@@ -1,6 +1,13 @@
-import pygame #Sellel real imporditakse Pygame
-pygame.init() #See rida sisestab kõik pygame moodulid programmi.
+import pygame
+pygame.init()
+#ekraani seaded
+screen=pygame.display.set_mode([640,480])
+pygame.display.set_caption("Harjutamine")
+screen.fill([204, 255, 204])
 
-screen = pygame.display.set_mode([640,480]) #See rida teeb uue akna, kuhu ilmuvad programmis kirjutatud kujutised 300 * 300.
-pygame.display.set_caption("Lumemees - #INSERT NAME HERE#") #See rida paneb aknale pealkirja
-screen.fill([0, 0, 0])
+#lisame teksti
+font = pygame.font.Font(None, 30)
+text = font.render("Hello PyGame", True, [0,0,0])
+screen.blit(text, [200,200])
+
+pygame.display.flip()

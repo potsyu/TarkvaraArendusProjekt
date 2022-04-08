@@ -6,11 +6,13 @@ pygame.display.set_caption("Ülesanne2")
 screen.fill([204, 255, 204])
 
 #lisame teksti
-font = pygame.font.SysFont("Tahoma", 50)
+font = pygame.font.SysFont("Comic Sans MS", 50)
 text = font.render("Hello PyGame", True, [0,0,0])
 screen.blit(text, [200,200])
 
 pygame.display.flip()
+
+
 
 
 #Alumine osa ei lase Pygame ekraanil ise kinni minna.

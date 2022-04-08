@@ -2,11 +2,11 @@ import pygame
 pygame.init()
 #ekraani seaded
 screen=pygame.display.set_mode([640,480])
-pygame.display.set_caption("Harjutamine")
+pygame.display.set_caption("Ülesanne2")
 screen.fill([204, 255, 204])
 
 #lisame teksti
-font = pygame.font.Font(None, 30)
+font = pygame.font.SysFont("Tahoma", 50)
 text = font.render("Hello PyGame", True, [0,0,0])
 screen.blit(text, [200,200])
 

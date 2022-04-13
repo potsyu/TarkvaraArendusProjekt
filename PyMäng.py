@@ -8,17 +8,17 @@ screen.fill([204, 255, 204])
 
 
 #Lisame BAKKROUND
-bg = pygame.image.load("bg_shop.jpg")
+bg = pygame.image.load("Pilt/bg_shop.jpg")
 screen.blit(bg,[0,0])
 
 #Lisame mehikene
-Mehikene = pygame.image.load("seller.png")
+Mehikene = pygame.image.load("Pilt/seller.png")
 Mehikene = pygame.transform.scale(Mehikene, [252, 300])
 screen.blit(Mehikene,[105,165])
 
 #Lisame chatti
-chat = pygame.image.load("chat.png")
-chat = pygame.transform.scale(chat, [262, 210])
+chat = pygame.image.load("Pilt/chat.png")
+chat = pygame.transform.scale(chat, [258, 210])
 screen.blit(chat,[245,65])
 
 #lisame teksti

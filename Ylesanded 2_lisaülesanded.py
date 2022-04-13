@@ -9,15 +9,19 @@ screen.fill([204, 255, 204])
 bg = pygame.image.load("Pilt\VIKK.jpg")
 screen.blit(bg,[0,0])
 
+#VIKK logo :)
+vikk = pygame.image.load("Pilt\VIKK logo.png")
+screen.blit(vikk, [20, 20])
 
+
+
+
+
+
+
+
+#Update the bludy sckreen
 pygame.display.flip()
-
-
-
-
-
-
-
 
 #Alumine osa ei lase Pygame ekraanil ise kinni minna.
 running = True

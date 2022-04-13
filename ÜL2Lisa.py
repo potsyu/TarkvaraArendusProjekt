@@ -10,7 +10,6 @@ screen.blit(bg,[0,0])
 
 #Lisame logo
 logo = pygame.image.load("Pilt/VIKK logo.png")
-logo = pygame.transform.scale(logo, [535, 70])
 screen.blit(logo,[50,20])
 
 

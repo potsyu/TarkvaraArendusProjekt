@@ -6,8 +6,6 @@ pygame.init()
 
 #Värvid
 lGreen = [153, 255, 153]
-lBlue = [153, 204, 255]
-red = [255, 0, 0]
 
 #Set the screen mode :)
 screen = pygame.display.set_mode([640,480])

@@ -10,8 +10,8 @@ bg = pygame.image.load("Pilt/VIKK.jpg")
 screen.blit(bg,[0,0])
 
 #Lisame logo
-logo = pygame.image.load("Pilt/VIKK logo.png")
-screen.blit(logo,[50,20])
+logo = pygame.image.load("Pilt/vikkk.png")
+screen.blit(logo,[10,0])
 
 #lisame mõõga
 mõõk = pygame.image.load("Pilt/Mõõk.png")

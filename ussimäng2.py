@@ -5,7 +5,16 @@ Made with PyGame
 
 import pygame, sys, time, random
 
+#Sound
+from pygame import mixer
 
+mp3_path = 'song.wav'
+pygame.init()
+pygame.mixer.init()
+"""
+pygame.mixer.music.load(mp3_path)
+pygame.mixer.music.play(-1)
+"""
 # Difficulty settings
 # Easy      ->  10
 # Medium    ->  25
@@ -61,6 +70,14 @@ score = 0
 
 # Game Over
 def game_over():
+
+    mp3_path = 'song.wav'
+    pygame.init()
+    pygame.mixer.init()
+    pygame.mixer.music.load(mp3_path)
+    pygame.mixer.music.play(-1)
+    time.sleep(5)
+
     my_font = pygame.font.SysFont('times new roman', 90)
     game_over_surface = my_font.render('YOU DIED', True, red)
     game_over_rect = game_over_surface.get_rect()
@@ -69,6 +86,7 @@ def game_over():
     game_window.blit(game_over_surface, game_over_rect)
     show_score(0, red, 'times', 20)
     pygame.display.flip()
+    pygame.mixer.quit()
     time.sleep(3)
     pygame.quit()
     sys.exit()

@@ -43,13 +43,13 @@ pygame.display.set_caption('Snake Eater')
 game_window = pygame.display.set_mode((frame_size_x, frame_size_y))
 
 
+
 # Colors (R, G, B)
 black = pygame.Color(0, 0, 0)
 white = pygame.Color(255, 255, 255)
 red = pygame.Color(255, 0, 0)
 green = pygame.Color(0, 255, 0)
 blue = pygame.Color(0, 0, 255)
-
 
 # FPS (frames per second) controller
 fps_controller = pygame.time.Clock()
@@ -160,7 +160,8 @@ while True:
     food_spawn = True
 
     # GFX
-    game_window.fill(black)
+    bg = pygame.image.load("Pilt/snake_game_background.jpg") #Snake Game Background :)
+    game_window.blit(bg, [0, 0])
     for pos in snake_body:
         # Snake body
         # .draw.rect(play_surface, color, xy-coordinate)

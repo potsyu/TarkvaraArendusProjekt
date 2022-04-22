@@ -8,6 +8,9 @@ import pygame, sys, time, random
 #Sound
 from pygame import mixer
 
+import pygame
+from pygame.locals import *
+from pygame import mixer
 
 """
 pygame.mixer.music.load(mp3_path)
@@ -105,7 +108,7 @@ def show_score(choice, color, font, size):
 mp3_path = 'music.wav'
 pygame.init()
 pygame.mixer.init()
-pygame.mixer.music.load(os.path.join(mp3_path, 'music.wav'))
+pygame.mixer.music.load(mp3_path)
 pygame.mixer.music.play(-1)
 # Main logic
 while True:
@@ -157,6 +160,8 @@ while True:
         pygame.mixer.music.play(0)
     else:
         snake_body.pop()
+
+
 
     # Spawning food on the screen
     if not food_spawn:

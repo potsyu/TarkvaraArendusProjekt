@@ -105,8 +105,8 @@ def show_score(choice, color, font, size):
 mp3_path = 'music.wav'
 pygame.init()
 pygame.mixer.init()
-pygame.mixer.music.load(mp3_path)
-pygame.mixer.music.play()
+pygame.mixer.music.load(os.path.join(mp3_path, 'music.wav'))
+pygame.mixer.music.play(-1)
 # Main logic
 while True:
     for event in pygame.event.get():

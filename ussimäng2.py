@@ -8,7 +8,7 @@ import pygame, sys, time, random
 #Sound
 from pygame import mixer
 
-mp3_path = 'song.wav'
+mp3_path = 'death.wav'
 pygame.init()
 pygame.mixer.init()
 """
@@ -71,15 +71,8 @@ score = 0
 # Game Over
 def game_over():
 
-    mp3_path = 'song.wav'
-    pygame.init()
-    pygame.mixer.init()
-    pygame.mixer.music.load(mp3_path)
-    pygame.mixer.music.play(-1)
-    time.sleep(2.5)
-
     my_font = pygame.font.SysFont('times new roman', 90)
-    game_over_surface = my_font.render('YOU DIED (Bruh)', True, red)
+    game_over_surface = my_font.render('YOU DIED', True, red)
     game_over_rect = game_over_surface.get_rect()
     game_over_rect.midtop = (frame_size_x/2, frame_size_y/4)
     game_window.fill(black)
@@ -87,6 +80,12 @@ def game_over():
     show_score(0, red, 'times', 20)
     pygame.display.flip()
     pygame.mixer.quit()
+    mp3_path = 'death.wav'
+    pygame.init()
+    pygame.mixer.init()
+    pygame.mixer.music.load(mp3_path)
+    pygame.mixer.music.play(-1)
+    time.sleep(4)
     time.sleep(3)
     pygame.quit()
     sys.exit()
@@ -151,6 +150,8 @@ while True:
     if snake_pos[0] == food_pos[0] and snake_pos[1] == food_pos[1]:
         score += 1
         food_spawn = False
+        pygame.mixer.music.load("collect.wav")
+        pygame.mixer.music.play(0)
     else:
         snake_body.pop()
 

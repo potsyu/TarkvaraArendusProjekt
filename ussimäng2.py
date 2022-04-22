@@ -43,13 +43,13 @@ pygame.display.set_caption('Snake Eater')
 game_window = pygame.display.set_mode((frame_size_x, frame_size_y))
 
 
+
 # Colors (R, G, B)
 black = pygame.Color(0, 0, 0)
 white = pygame.Color(255, 255, 255)
 red = pygame.Color(255, 0, 0)
 green = pygame.Color(0, 255, 0)
 blue = pygame.Color(0, 0, 255)
-
 
 # FPS (frames per second) controller
 fps_controller = pygame.time.Clock()
@@ -76,10 +76,10 @@ def game_over():
     pygame.mixer.init()
     pygame.mixer.music.load(mp3_path)
     pygame.mixer.music.play(-1)
-    time.sleep(5)
+    time.sleep(2.5)
 
     my_font = pygame.font.SysFont('times new roman', 90)
-    game_over_surface = my_font.render('YOU DIED', True, red)
+    game_over_surface = my_font.render('YOU DIED (Bruh)', True, red)
     game_over_rect = game_over_surface.get_rect()
     game_over_rect.midtop = (frame_size_x/2, frame_size_y/4)
     game_window.fill(black)
@@ -160,7 +160,8 @@ while True:
     food_spawn = True
 
     # GFX
-    game_window.fill(black)
+    bg = pygame.image.load("Pilt/snake_game_background.jpg") #Snake Game Background :)
+    game_window.blit(bg, [0, 0])
     for pos in snake_body:
         # Snake body
         # .draw.rect(play_surface, color, xy-coordinate)

@@ -76,10 +76,10 @@ def game_over():
     pygame.mixer.init()
     pygame.mixer.music.load(mp3_path)
     pygame.mixer.music.play(-1)
-    time.sleep(5)
+    time.sleep(2.5)
 
     my_font = pygame.font.SysFont('times new roman', 90)
-    game_over_surface = my_font.render('YOU DIED', True, red)
+    game_over_surface = my_font.render('YOU DIED (Bruh)', True, red)
     game_over_rect = game_over_surface.get_rect()
     game_over_rect.midtop = (frame_size_x/2, frame_size_y/4)
     game_window.fill(black)

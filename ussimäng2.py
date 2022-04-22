@@ -105,11 +105,11 @@ def show_score(choice, color, font, size):
     # pygame.display.flip()
 
 #Main THEMES
-mp3_path = 'music.wav'
-pygame.init()
-pygame.mixer.init()
-pygame.mixer.music.load(mp3_path)
-pygame.mixer.music.play(-1)
+pygame.mixer.music.load("music.wav")
+pygame.mixer.music.set_volume(0.5)
+pygame.mixer.music.play(loops=-1)
+
+pygame.mixer.Channel(1).play(pygame.mixer.Sound('music.wav'), maxtime=600)
 # Main logic
 while True:
     for event in pygame.event.get():
@@ -156,7 +156,7 @@ while True:
     if snake_pos[0] == food_pos[0] and snake_pos[1] == food_pos[1]:
         score += 1
         food_spawn = False
-        pygame.mixer.music.load("collect.wav")
+        pygame.mixer.Channel(2).play(pygame.mixer.Sound('collect.wav'), maxtime=600)
         pygame.mixer.music.play(0)
     else:
         snake_body.pop()

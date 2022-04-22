@@ -8,9 +8,7 @@ import pygame, sys, time, random
 #Sound
 from pygame import mixer
 
-mp3_path = 'death.wav'
-pygame.init()
-pygame.mixer.init()
+
 """
 pygame.mixer.music.load(mp3_path)
 pygame.mixer.music.play(-1)
@@ -103,7 +101,12 @@ def show_score(choice, color, font, size):
     game_window.blit(score_surface, score_rect)
     # pygame.display.flip()
 
-
+#Main THEMES
+mp3_path = 'music.wav'
+pygame.init()
+pygame.mixer.init()
+pygame.mixer.music.load(mp3_path)
+pygame.mixer.music.play()
 # Main logic
 while True:
     for event in pygame.event.get():
